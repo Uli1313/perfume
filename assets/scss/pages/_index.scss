@@ -63,6 +63,10 @@
 // main-product
 .main-product-img {
   height: 540px;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(0.99);
+  }
 }
 .sold-out::before {
   content: "Sold out";
