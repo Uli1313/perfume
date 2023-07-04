@@ -1,0 +1,19 @@
+.call-to-action {
+  background: center/ cover
+    url("https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index10.jpg?raw=true");
+  padding: 312px 0 112px 0;
+  &-btn {
+    padding: 18px 24px;
+  }
+  &-email {
+    &:focus-visible {
+      outline: 0;
+    }
+    &[placeholder] {
+      padding-left: 16px;
+    }
+    &::placeholder {
+      color: $dark;
+    }
+  }
+}

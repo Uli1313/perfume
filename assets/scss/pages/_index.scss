@@ -1,3 +1,105 @@
-.index-title {
-  font-size: 100px;
+// banner
+.banner {
+  background: center/ cover no-repeat
+    url("https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true");
+  &-shop-now {
+    &:hover {
+      background: rgba($white, 0.2);
+    }
+  }
+}
+// 增加權重到 (0, 3, 0) 覆蓋 bootstrap 樣式
+.banner .banner-shop-now:active {
+  background: rgba($white, 0.2);
+}
+@media (max-width: 768px) {
+  .banner {
+    background-position-x: 12%;
+    margin-bottom: 40px;
+    &-desc {
+      margin-top: 135px;
+      margin-bottom: 101px;
+      &-title {
+        font-size: 32px;
+      }
+      &-content {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// intro
+.training {
+  &-btn {
+    &:hover {
+      background: $gray-200;
+      color: $black;
+    }
+  }
+}
+// 增加權重到 (0, 3, 0) 覆蓋 bootstrap 樣式
+.training .training-btn:active {
+  background: $gray-200;
+  color: $black;
+}
+@media (max-width: 768px) {
+  .intro {
+    margin-bottom: 40px;
+    &-img {
+      height: 350px;
+      &-training {
+        height: 680px;
+      }
+    }
+  }
+  .training {
+    ul {
+      gap: 20px;
+    }
+  }
+}
+
+// main-product
+.main-product-img {
+  height: 540px;
+}
+.sold-out::before {
+  content: "Sold out";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, 0.3);
+  color: $white;
+  font-size: 24px;
+  font-weight: 600;
+  // 文字置中
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .main-product {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+    &-img {
+      height: 350px;
+    }
+  }
+  .poppy-img {
+    object-position: 50% 100%;
+  }
+}
+
+// bottle-recycling
+.bottle-recycling {
+  &-img {
+    height: 520px;
+  }
+}
+@media (max-width: 768px) {
+  .bottle-recycling {
+    margin-bottom: 40px;
+  }
 }
